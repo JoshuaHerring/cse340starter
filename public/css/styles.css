@@ -4,3 +4,174 @@
 *:after {
   box-sizing: border-box;
 }
+
+/*Header starts here*/
+
+#top-header
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.plainLink
+{
+  color: black;
+  text-decoration: none;
+}
+
+.homelink
+{
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.accountLink
+{
+  font-size: 20px;
+}
+
+nav
+{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(9, 23, 128);
+  height: 60px;
+}
+
+.nav_item
+{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+
+
+
+/* Body starts here */
+
+.hero_holder
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin-bottom: 40px;
+}
+
+.hero_image
+{
+  grid-column: 1/6;
+  grid-row: 1;
+  width: 100%;
+}
+
+.hero_content
+{
+  grid-column: 1/4;
+  grid-row: 1;
+  color: #4C96D7;
+  background-color: rgba(211, 211, 211, 0.889);
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  font-size: 18px;
+}
+
+.content_item
+{
+  margin: 5px 0;
+}
+
+.today_button
+{
+  width: 100%;
+}
+
+.reviews_list
+{
+  padding-left: 20px;
+}
+
+.review_item
+{
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.car_upgrades
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  justify-items: center;
+}
+
+.upgrade_img
+{
+  background-color: #4C96D7;
+  padding: 5px 50px;
+}
+
+.upgrade_part
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+}
+
+
+@media (min-width: 600px)
+{
+  /* larger header */
+
+  #top-header
+  {
+    border-top: solid white 30px;
+  }
+
+  nav
+  {
+    height: 40px;
+  }
+
+  .hero_holder
+  {
+    margin: 0 8%;
+  }
+
+  .bottom_section
+  {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .car_reviews
+  {
+    grid-column: 2/3;
+    margin: 5px;
+  }
+
+  .car_upgrades
+  {
+    grid-column: 1/2;
+    grid-row: 1;
+    margin: 5px;
+  }
+
+  body
+  {
+    border: 5px solid lightblue;
+    border-radius: 10px;
+    background-image: url(../images/site/white_backround.png);
+    margin: 30px;
+  }
+
+  html
+  {
+    background-image: url(../images/site/small_check.jpg);
+  }
+
+}
