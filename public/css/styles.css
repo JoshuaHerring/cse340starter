@@ -165,8 +165,8 @@ nav
   {
     border: 5px solid lightblue;
     border-radius: 10px;
-    background-image: url(../images/site/white_backround.png);
     margin: 30px;
+    background-color: white;
   }
 
   html
