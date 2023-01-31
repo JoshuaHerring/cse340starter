@@ -240,3 +240,11 @@ VALUES   (
     'White',
     5
   );
+
+-- Query 6  UPDATE file path in image and thumbnail from /images to  /images/vehicles/
+
+
+  UPDATE public.inventory
+SET 
+    inv_image = Replace(inv_image, '/images','/images/vehicles'),
+    inv_thumbnail = REPLACE(inv_thumbnail, '/images', '/images/vehicles');
