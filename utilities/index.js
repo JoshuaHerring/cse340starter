@@ -2,7 +2,7 @@ const invModel = require("../models/inventroy-model");
 const Util = {};
 
 /* *******************
-* Constructs thje nav html unorder list
+* Constructs the nav html unorder list
 ************************* */
 
 Util.buildNav = function (data) {
@@ -20,7 +20,7 @@ Util.buildNav = function (data) {
         "</a>"   
         list += "</li>"     
     });
-    list += "</ul"
+    list += "</ul>"
     return list;
 }
 
