@@ -1,7 +1,7 @@
 const express = require("express");
-const router = new express.router();
-const invController = require("../controllers/invController");
+const router = new express.Router();
+const invController = require("../controllers/invContoller");
 
-router.get("/type/classificationId", invController.buildClassification);
+router.get("/type/:classificationId", invController.buildByClassification);
 
 module.exports = router;
