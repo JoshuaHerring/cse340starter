@@ -1,3 +1,4 @@
+const { json } = require("express");
 const invModel = require("../models/inventroy-model");
 const Util = {};
 
@@ -32,6 +33,22 @@ Util.getNav = async function (req, res, next) {
     let data = await invModel.getClassifications()
     nav = Util.buildNav(data)
     return nav;
+}
+
+/* ***************************************
+* Builds the vehicle page
+********************************** */
+
+Util.getVehiclePage = async function (data) {
+    let page = `
+    <img src="${data.rows[0].inv_image}" alt="Image of ${data.rows[0].inv_make + "" + data.rows[0].inv_model}"></img>
+    <p>Price: $${new Intl.NumberFormat('en-US').format(data.rows[0].inv_price)}</p>
+    <p>Color: ${data.rows[0].inv_color}</p>
+    <p>Miles: ${new Intl.NumberFormat('en-US').format(data.rows[0].inv_miles)}</p>
+    <p>${data.rows[0].inv_description}</p>
+    `
+
+    return page;
 }
 
 module.exports = Util;
